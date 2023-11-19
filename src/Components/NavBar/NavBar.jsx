@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './NavBar.css'
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
 
 const NavBar = () => {
 
@@ -29,7 +30,8 @@ const NavBar = () => {
             <button>Login / Sign Up</button>
             
         </nav>
-        <RxHamburgerMenu onClick={handleClick}  className='ham' size={26} />
+       { isOpened ? <IoMdClose size={26} className='ham' onClick={handleClick} /> :
+        <RxHamburgerMenu onClick={handleClick}  className='ham' size={26} />}
     </div>
   )
 }
